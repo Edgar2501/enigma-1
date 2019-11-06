@@ -19,6 +19,7 @@ class OrderType extends AbstractType
             ->add('status', ChoiceType::class, [
                 'choices' => array_combine(Order::STATUSES, Order::STATUSES)
             ])
+            ->add('name')
             ->add('selections', CollectionType::class, [
                 'entry_type' => SelectionType::class,
                 'allow_add' => true,
